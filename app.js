@@ -3,6 +3,7 @@ var methodOverride = require('method-override');
 var app = express();
 var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
 var bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost/rotten-potatoes');
